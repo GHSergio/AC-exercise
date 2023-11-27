@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zn-hant-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ming Hsu" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="rating" content="general" />
+    <base target="_self" />
+    <title>Favorite List</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/cc4f1b5143.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./myMovie.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Movie List</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Favorite</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <!-- Search Bar -->
+      <!-- <form
+        class="d-flex g-3 align-items-center flex-row mb-2 justify-content-between"
+        id="search-form"
+      >
+        <div class="searchBar d-flex">
+          <div class="row-auto me-2">
+            <label class="visually-hidden" for="search-input">
+              Search Keyword
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              id="search-input"
+              placeholder="Keyword..."
+            />
+          </div>
+          <div class="row-auto">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="search-submit-button"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+      </form> -->
+      <div class="changeMode m-2">
+        <i class="fa fa-th me-1" aria-hidden="true"></i>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+
+      <div class="row" id="data-panel">
+        <!-- .... -->
+        <ul class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+
+    <!-- 回到最上方 -->
+    <a href="#" class="scroll-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Page navigation  -->
+    <nav aria-label="Page navigation">
+      <!-- class+置中,給id -->
+      <ul class="pagination justify-content-center" id="paginator">
+        <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+      </ul>
+    </nav>
+
+    <!-- Movie Modal -->
+    <!-- btn target ,modal id需一致 -->
+    <div
+      class="modal fade"
+      id="movie-modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- 綁定movie-modal-title -->
+            <h5 class="modal-title" id="movie-modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- 新增modal內容 -->
+          <div class="modal-body" id="movie-modal-body">
+            <div class="row">
+              <!-- 綁定movie-modal-image -->
+              <div class="col-sm-8" id="movie-modal-image">
+                <img
+                  src="https://webdev.alphacamp.io/posters/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg"
+                  alt="movie-poster"
+                  class="img-fuid"
+                />
+              </div>
+              <div class="col-sm-4">
+                <!-- 綁定movie-modal-date -->
+                <p><em id="movie-modal-date">date:2020/2/5</em></p>
+                <!-- 綁定movie-modal-description -->
+                <p id="movie-modal-description">movie</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./favoriteList.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(89, 76, 76);
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #0d0a0a;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+}
+.scroll-to-top i {
+  margin-top: 17px;
+}
+
+.changeMode i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+  background-color: rgb(144, 202, 199);
+}
+.card-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.list-group-item {
+  width: 100%;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+  background-color: rgb(144, 202, 199);
+  align-items: center;
+}
+
+.fa-heart {
+  color: white;
+}
+.fa-heart:hover {
+  scale: 1.2;
+  color: red;
+}
+
+.favorite {
+  color: red;
+}
+
+.fa-trash:hover {
+  color: red;
+  scale: 1.3;
+}
+
+.thumbnail {
+  width: 50px;
+}
+
+.pagination {
+  margin-top: 1rem;
+}
