@@ -18,3 +18,6 @@ type the title of the movies in search bar
 In index page, press the `♥` button on the movie to keep it into favorite list.
 You can checkout the favorite list in `favoriteList.html`
 press `x` to remove it from favorite list
+
+#### Movie List URL
+https://ghsergio.github.io/AC-exercise/
